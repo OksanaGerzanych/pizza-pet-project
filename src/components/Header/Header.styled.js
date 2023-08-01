@@ -38,6 +38,7 @@ export const ContainerCart = styled.div`
   width: 150px;
   height: 50px;
   border-radius: 30px;
+  box-shadow: 2px 2px 5px rgba(193, 107, 37);
   background: #f26b25;
   display: flex;
   flex-direction: row;

@@ -8,7 +8,7 @@ export default function Header() {
       <ContainerLogo>
         <Logo src={logo} alt="logo" />
         <ContainerName>
-          <h1>PIZZA</h1>
+          <h1>Dragon pizza</h1>
           <LogoText>the best pizza of the world</LogoText>
         </ContainerName>
       </ContainerLogo>
