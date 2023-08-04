@@ -1,5 +1,12 @@
 import { styled } from "styled-components";
 
+export const SectionFilter = styled.section`
+  padding: 40px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const CategoriesList = styled.ul`
   list-style: none;
   display: flex;
