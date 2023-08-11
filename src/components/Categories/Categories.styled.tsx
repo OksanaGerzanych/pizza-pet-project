@@ -18,7 +18,9 @@ export const CategoriesItem = styled.li`
   border: 1px solid #cccccc;
   box-shadow: 2px 2px 5px rgba(136, 136, 136, 1);
   border-radius: 30px;
-  background: #f9f9f9;
+  background-color: ${props => (props.active ? "#f06d24" : "transparent")};
+  color: ${props => (props.active ? "#fff" : "#231f20")};
+  
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -26,8 +28,8 @@ export const CategoriesItem = styled.li`
   letter-spacing: 0.24px;
   text-align: center;
   padding: 10px 30px;
-  &:active {
-    background: #231f20;
-    color: fff;
+  &:hover{
+    border: transparent;
   }
+  
 `;

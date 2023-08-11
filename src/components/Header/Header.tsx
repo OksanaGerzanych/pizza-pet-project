@@ -1,6 +1,6 @@
 import logo from "../../img/pizza-logo.png";
 import {BsCart4} from 'react-icons/bs'
-import { HeaderStyle, ContainerLogo, Logo, ContainerName, LogoText, ContainerCart, CartPrice, CartNumber } from "./Header.styled.js";
+import { HeaderStyle, ContainerLogo, Logo, ContainerName, LogoText, ContainerCart, CartPrice, CartNumber } from "./Header.styled";
 
 export default function Header() {
   return (

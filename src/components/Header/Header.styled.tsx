@@ -18,6 +18,7 @@ export const Logo = styled.img`
   display: flex;
   width: 65px;
   height: 55px;
+  
 `;
 
 export const LogoText = styled.p`
@@ -45,6 +46,7 @@ export const ContainerCart = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  /* color: #fff; */
 `;
 
 export const CartPrice = styled.p`
@@ -55,6 +57,7 @@ export const CartPrice = styled.p`
   font-weight: 700;
   line-height: normal;
   margin-right: 10px;
+   /* color: #fff; */
   /* &::after {
     content: "";
     position: absolute;

@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from 'styled-components';
 
 export const CardPizza = styled.li`
   display: flex;
@@ -51,8 +51,6 @@ export const ListSize = styled.ul`
 export const Item = styled.li`
   cursor: pointer;
   padding: 10px 20px;
-  /* ${(props) => (props.active ? "#f06d24" : "transparent")};
-  color: ${(props) => (props.active ? "white" : "black")}; */
   &:active {
     background: #ffffff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
@@ -98,6 +96,8 @@ export const AddButton = styled.button`
   }
   &:focus {
     box-shadow: 0 2px 10px rgba(240, 109, 36, 0.5);
+    outline: transparent;
+   
   }
   /* span {
     color: #fff;

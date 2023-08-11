@@ -1,14 +1,14 @@
-//import { useState } from 'react';
+import { useState } from 'react';
 import pizza from '../../img/pizza-d.png';
-import {CardPizza, ListSize, ContainerChoosePizza, NamePizza, ContainerAddPizza, Price, Item,  AddButton} from '../PizzaCard/PizzaCard.styled.js'
+import {CardPizza, ListSize, ContainerChoosePizza, NamePizza, ContainerAddPizza, Price, Item,  AddButton} from '../PizzaCard/PizzaCard.styled'
 
 
 export default function PizzaCard() {
-//   const [pizzaCount, setPizzaCount] = useState(0);
+  const [pizzaCount, setPizzaCount] = useState(0);
   
-//   const AddPizza = () => {
-//     setPizzaCount(pizzaCount+1);
-// } 
+  const AddPizza = () => {
+    setPizzaCount(pizzaCount+1);
+} 
   return (
       <CardPizza>
           <img src={pizza} alt="pizza" width="260px" />
@@ -24,7 +24,10 @@ export default function PizzaCard() {
         <Item >40 cm.</Item>
               </ListSize>
           </ContainerChoosePizza>
-          <ContainerAddPizza> <Price>from 200UAH</Price>  <AddButton type="submit" > + Add <span>1</span> </AddButton></ContainerAddPizza>
+      <ContainerAddPizza> <Price>from 200UAH</Price>
+        <AddButton type="submit" onClick={AddPizza}> + Add
+          <span> {pizzaCount}</span> </AddButton>
+      </ContainerAddPizza>
     </CardPizza>
   );
  

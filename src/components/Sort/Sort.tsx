@@ -1,4 +1,4 @@
-import {Select, ContainerSort, TextSort} from '../Sort/Sort.styled.js'
+import {Select, ContainerSort, TextSort} from '../Sort/Sort.styled'
 
 export default function Sort() {
     return (
