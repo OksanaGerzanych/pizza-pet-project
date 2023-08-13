@@ -1,34 +1,57 @@
-import { useState } from 'react';
-import pizza from '../../img/pizza-d.png';
-import {CardPizza, ListSize, ContainerChoosePizza, NamePizza, ContainerAddPizza, Price, Item,  AddButton} from '../PizzaCard/PizzaCard.styled'
+import { useState } from "react";
+//import pizza from '../../img/pizza-d.png';
+import {
+  CardPizza,
+  ListSize,
+  ContainerChoosePizza,
+  NamePizza,
+  ContainerAddPizza,
+  Price,
+  Item,
+  AddButton,
+  ItemSize,
+} from "../PizzaCard/PizzaCard.styled";
 
-
-export default function PizzaCard() {
+export default function PizzaCard({ title, price, image, sizes, types }) {
   const [pizzaCount, setPizzaCount] = useState(0);
-  
+  const [choosedType, setChoosedType] = useState(0);
+  const [choosedSize, setChoosedSize] = useState(0);
+
   const AddPizza = () => {
-    setPizzaCount(pizzaCount+1);
-} 
+    setPizzaCount(pizzaCount + 1);
+  };
+
+  const activeType = (index) => {
+    setChoosedType(index);
+  }
+  const activeSize = (index) => { 
+    setChoosedSize(index);
+  }
+  const typeName = ['classic', 'gluten free']
   return (
-      <CardPizza>
-          <img src={pizza} alt="pizza" width="260px" />
-          <NamePizza>Salami</NamePizza>
-          <ContainerChoosePizza>
-              <ListSize>
-        <Item >classic</Item>
-        <Item >gluten free</Item>
-      </ListSize>
-      <ListSize>
-        <Item >26 cm.</Item>
-        <Item >30 cm.</Item>
-        <Item >40 cm.</Item>
-              </ListSize>
-          </ContainerChoosePizza>
-      <ContainerAddPizza> <Price>from 200UAH</Price>
-        <AddButton type="submit" onClick={AddPizza}> + Add
-          <span> {pizzaCount}</span> </AddButton>
+    <CardPizza>
+      <img src={image} alt="pizza" width="260px" />
+      <NamePizza>{title}</NamePizza>
+      <ContainerChoosePizza>
+        <ListSize>
+          {types.map((type, i) => (<Item key={ i} active={choosedType === type} onClick={() =>activeType(type)}>{typeName[type]}</Item>))}
+          
+        </ListSize>
+        <ListSize>
+          {sizes.map((size, i) => (
+            <ItemSize key={i} active={choosedSize === i} onClick={()=>activeSize(i)}>{size} cm.</ItemSize>
+          ))}
+        </ListSize>
+      </ContainerChoosePizza>
+      <ContainerAddPizza>
+        {" "}
+        <Price>from {price}UAH</Price>
+        <AddButton type="submit" onClick={AddPizza}>
+          {" "}
+          + Add
+          <span> {pizzaCount}</span>{" "}
+        </AddButton>
       </ContainerAddPizza>
     </CardPizza>
   );
- 
 }

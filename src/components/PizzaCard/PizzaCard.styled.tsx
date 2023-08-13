@@ -4,12 +4,11 @@ export const CardPizza = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
   border: 1px solid #cccccc;
   box-shadow: 2px rgba(136, 136, 136, 1);
   border-radius: 5px;
   background: #f9f9f9;
-  padding: 20px;
+  padding: 10px;
 `;
 export const NamePizza = styled.h3`
   color: #000;
@@ -30,6 +29,7 @@ export const ContainerChoosePizza = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2px;
 
   border-radius: 10px;
   background: #f3f3f3;
@@ -37,26 +37,34 @@ export const ContainerChoosePizza = styled.div`
 `;
 export const ListSize = styled.ul`
   display: flex;
-  gap: 20px;
-
-  color: #2c2c2c;
   text-align: center;
+
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.21px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
 `;
 export const Item = styled.li`
   cursor: pointer;
+  width: 100px;
   padding: 10px 20px;
-  &:active {
-    background: #ffffff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-    border-radius: 5px;
-    cursor: auto;
-  }
+  border-radius: 5px;
+  background-color: ${props => (props.active ? '#ffffff':'#f3f3f3'  )};
+  color: ${props => (props.active ? '#000' : '#7a7979')};
+ 
+`;
+
+export const ItemSize = styled.li`
+  cursor: pointer;
+  width: 53px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: ${props => (props.active ? '#ffffff':'#f3f3f3'  )};
+  color: ${props => (props.active ? '#000' : '#7a7979')};
+ 
 `;
 
 export const ContainerAddPizza = styled.div`

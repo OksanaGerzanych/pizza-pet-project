@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
 export const ListPizza = styled.ul`
-display: flex
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 10px;
 `;
