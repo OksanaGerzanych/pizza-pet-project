@@ -34,7 +34,7 @@ export default function PizzaCard({ title, price, image, sizes, types }) {
       <NamePizza>{title}</NamePizza>
       <ContainerChoosePizza>
         <ListSize>
-          {types.map((type, i) => (<Item key={ i} active={choosedType === type} onClick={() =>activeType(type)}>{typeName[type]}</Item>))}
+          {types.map((type, i) => (<Item key={type} active={choosedType === type} onClick={() =>activeType(type)}>{typeName[type]}</Item>))}
           
         </ListSize>
         <ListSize>

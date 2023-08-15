@@ -20,8 +20,8 @@ export default function Categories() {
       <div>
         <CategoriesList>
           {categories.map((category, index) => (
-             
-              <CategoriesItem
+            <CategoriesItem
+              key={index}
                 onClick={() => activeCategory(index)}
                 active={activeIndex === index}
               >

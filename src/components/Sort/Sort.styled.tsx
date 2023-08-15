@@ -2,7 +2,8 @@ import { styled } from "styled-components";
 
 export const Select = styled.select`
   border: 1px solid #cccccc;
-  border-radius: 30px;
+  /* color: #f26b25; */
+  border-radius: 2px;
   padding: 10px;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
@@ -10,6 +11,9 @@ export const Select = styled.select`
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.21px;
+  &:hover, &:focus{
+   outline-style: none;
+  }
 `;
 export const ContainerSort = styled.div`
   display: flex;

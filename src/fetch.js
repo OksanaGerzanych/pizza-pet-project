@@ -1,5 +1,5 @@
 import axios from "axios";
-
+//import { createAsyncThunk } from "@reduxjs/toolkit";
 const options = {
   method: "GET",
   url: "https://pizza-and-desserts.p.rapidapi.com/pizzas/1",

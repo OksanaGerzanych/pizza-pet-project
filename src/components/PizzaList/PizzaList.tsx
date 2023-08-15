@@ -5,7 +5,7 @@ import { pizzas } from "../../pizza.json";
 export default function PizzaList() {
   return (
     <ListPizza>
-      {pizzas.map((pizza, id) => (
+      {pizzas.map((pizza) => (
         <PizzaCard
           key={pizza.id}
           title={pizza.name}
