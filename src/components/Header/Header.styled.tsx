@@ -46,7 +46,7 @@ export const ContainerCart = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /* color: #fff; */
+ 
 `;
 
 export const CartPrice = styled.p`

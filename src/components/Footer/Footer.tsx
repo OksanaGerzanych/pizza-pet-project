@@ -1,4 +1,4 @@
-import { FooterStyle, List} from "./Footer.styled";
+import { FooterStyle, List, Text, Icon, ListContacts, Wrapper} from "./Footer.styled";
 import { BsGithub, BsLinkedin, BsTelephone  } from "react-icons/bs";
 import { GoMail } from "react-icons/go";
 import { LiaCopyrightSolid } from "react-icons/lia";
@@ -10,26 +10,27 @@ export default function Footer() {
      const currentYear = new Date().getFullYear();
   return (
     <FooterStyle>
-      <List>
+      <Wrapper>
+      <ListContacts>
         <li>
           <a href="mailto:oksanagerzanych.job@gmail.com">
             {" "}
-            <span>
+            <Icon>
               <GoMail size={20} />
-            </span>
+            </Icon>
             oksanagerzanych.job@gmail.com
           </a>
         </li>
         <li>
           <a href="tel:+380509441543">
             {" "}
-            <span>
+            <Icon>
               <BsTelephone size={20} />
-            </span>
+            </Icon>
             +38 (050) 944-15-43
           </a>
         </li>
-      </List>
+      </ListContacts>
 
       <List>
         <li>
@@ -53,8 +54,8 @@ export default function Footer() {
             <BsGithub size={40} />
           </a>
         </li>
-          </List>
-          <p><LiaCopyrightSolid /> {currentYear} Made with<AiOutlineHeart/>by OGerzanych </p>
+          </List></Wrapper>
+          <Text> Made with <AiOutlineHeart size={12} /> by OGerzanych <LiaCopyrightSolid size={12}/> {currentYear}</Text>
     </FooterStyle>
   );
 }
