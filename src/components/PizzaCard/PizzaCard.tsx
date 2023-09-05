@@ -44,12 +44,12 @@ export default function PizzaCard({ title, price, image, sizes, types }) {
         </ListSize>
       </ContainerChoosePizza>
       <ContainerAddPizza>
-        {" "}
+       
         <Price>from {price}UAH</Price>
         <AddButton type="submit" onClick={AddPizza}>
-          {" "}
+          
           + Add
-          <span> {pizzaCount}</span>{" "}
+          <span> {pizzaCount}</span>
         </AddButton>
       </ContainerAddPizza>
     </CardPizza>

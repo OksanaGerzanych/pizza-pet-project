@@ -7,7 +7,7 @@ export const FooterStyle = styled.footer`
     max-width: 1200px;
     justify-content: center;
     padding: 0 50px;
-    background-color: #f06d24;
+    background-color: #f26b25;
     height: 150px;
     margin-top: 20px;
     color: #231f20;

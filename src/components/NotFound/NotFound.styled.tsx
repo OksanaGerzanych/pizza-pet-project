@@ -18,16 +18,18 @@ export const TextUp = styled.p`
 
 `
 export const LinkStyle = styled(Link)`
-   padding: 20px;
+   padding: 15px;
    display: flex;
    gap: 5px;
    justify-content: center;
    align-items: center;
    width: 150px;
-   border-radius: 25px;
+   border-radius: 32px;
    border: 1px solid #ef854ba8;
-   margin: 50px auto 20px ;
-   background-color: #f06d24;
+   margin: 50px auto 20px;
+   background-color: #f26b25;
+   box-shadow: 2px 2px 5px rgba(193, 107, 37);
+  
    color: #fff;
    text-transform: uppercase;
 `
